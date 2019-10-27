@@ -1,23 +1,13 @@
 import React from 'react';
-import { Square, SquareProps } from '../Square/Square';
+import { Square } from '../Square/Square';
 import './Board.scss';
-export class Board extends React.Component {
-  private squares: SquareProps[] = [];
-  constructor(props: any) {
-    super(props);
-    this.buildGrid();
-  }
-  buildGrid() {
-    for (let i = 0; i < 100; i++) {
-      this.squares.push({ foo: '' });
+export function Board(props: any) {
+  const renderSquares = () => {
+    if (props.player && props.player.squares && props.player.squares.length) {
+      return props.player.squares.map(() => {
+        return <Square />;
+      });
     }
-  }
-  renderSquares() {
-    return this.squares.map(square => {
-      return <Square />;
-    });
-  }
-  render() {
-    return <div className="Board">{this.renderSquares()}</div>;
-  }
+  };
+  return <div className="Board">{renderSquares()}</div>;
 }
