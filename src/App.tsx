@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Game } from './Game/Game';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        🙂 🤪 B A T T L E 😌 M O J I S! 😁 😎{' '}
       </header>
+      <main>
+        <Game />
+      </main>
+      <footer>
+        ProgrammerInProgress 2019 - Check the project out on&nbsp;
+        <a
+          href="https://github.com/programmerinprogress/react-battlemojis"
+          target="blank"
+        >
+          GitHub
+        </a>
+      </footer>
     </div>
   );
 }
