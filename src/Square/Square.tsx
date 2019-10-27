@@ -4,7 +4,7 @@ import './Square.scss';
 export class SquareProps {
   foo: string = '';
 }
-export const Square: React.FC = () => {
+export const Square: React.FunctionComponent = () => {
   return (
     <div className="Square">
       <span>🤪</span>
